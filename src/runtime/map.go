@@ -829,7 +829,7 @@ func mapiterinit(t *maptype, h *hmap, it *hiter) {
 	}
 
 	// decide where to start
-	r := uintptr(fastrand())
+	r := uintptr(0)
 	if h.B > 31-bucketCntBits {
 		r += uintptr(fastrand()) << 31
 	}
